@@ -43,11 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Builder.cs" />
+    <Compile Include="Builders\Capture.cs" />
+    <Compile Include="Builders\EitherOf.cs" />
+    <Compile Include="Builders\NegativeLookahead.cs" />
+    <Compile Include="Builders\NegativeLookbehind.cs" />
+    <Compile Include="Builders\NonCapture.cs" />
+    <Compile Include="Builders\Optional.cs" />
+    <Compile Include="Builders\PositiveLookahead.cs" />
+    <Compile Include="Builders\PositiveLookbehind.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
