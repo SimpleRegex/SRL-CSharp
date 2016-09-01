@@ -1,4 +1,5 @@
 ﻿using SRL_CSharp.Exceptions;
+using SRL_CSharp.Language.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace SRL_CSharp.Interfaces
         protected string MethodName { get; set; }
 
         /** @var array Contains the parsed parameters to pass on execution. */
-        protected List<string> Parameters { get; set; }
+        protected List<object> Parameters { get; set; }
 
         /** @var int[] Contains all executed callbacks for that method. Helps finding "lost" groups. */
         private List<int> executedCallbacks = new List<int>();
@@ -28,7 +29,7 @@ namespace SRL_CSharp.Interfaces
         {
             this.Original = original;
             this.MethodName = methodName;
-            this.Parameters = new List<string>();
+            this.Parameters = new List<object>();
         }
 
         public void callMethodOn(Builder builder)
@@ -42,6 +43,11 @@ namespace SRL_CSharp.Interfaces
                 //Fix Exception handling
                 throw new SyntaxException();
             }
+        }
+
+        public Method setParameters(List<object> parameters)
+        {
+            return null;
         }
     }
 }

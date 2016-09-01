@@ -55,6 +55,19 @@
     <Compile Include="Builders\Optional.cs" />
     <Compile Include="Builders\PositiveLookahead.cs" />
     <Compile Include="Builders\PositiveLookbehind.cs" />
+    <Compile Include="Exceptions\BuilderException.cs" />
+    <Compile Include="Exceptions\ImplementationException.cs" />
+    <Compile Include="Exceptions\InterpreterException.cs" />
+    <Compile Include="Exceptions\PregException.cs" />
+    <Compile Include="Exceptions\SRLException.cs" />
+    <Compile Include="Exceptions\SyntaxException.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Interfaces\Method.cs" />
+    <Compile Include="Interfaces\TestMethodProvider.cs" />
+    <Compile Include="Language\Helpers\Cache.cs" />
+    <Compile Include="Language\Helpers\Literally.cs" />
+    <Compile Include="Language\Helpers\Matcher.cs" />
+    <Compile Include="Language\Methods\AndMethod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
