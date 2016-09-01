@@ -16,7 +16,7 @@ namespace SRL_CSharp.Builders
         /// </summary>
         /// <param name="name">The name.</param>
         /// <returns>The group name set</returns>
-        public string setName(string name)
+        public string SetName(string name)
         {
             return string.Format(group, name);
         }

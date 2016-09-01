@@ -12,7 +12,7 @@ namespace SRL_CSharp.Language.Helpers
         /// </summary>
         /// <param name="srl">String SRL</param>
         /// <param name="builder">Builder object</param>
-        public static void add(string srl, Builder builder)
+        public static void Add(string srl, Builder builder)
         {
             cache.Add(srl, builder);
         }
@@ -22,7 +22,7 @@ namespace SRL_CSharp.Language.Helpers
         /// </summary>
         /// <param name="srl">SRL key</param>
         /// <returns>True if the current SRL is in cache; otherwise, false</returns>
-        public static bool has(string srl)
+        public static bool Has(string srl)
         {
             return cache.ContainsKey(srl);
         }
@@ -32,7 +32,7 @@ namespace SRL_CSharp.Language.Helpers
         /// </summary>
         /// <param name="srl">SRL key</param>
         /// <returns>Builder object</returns>
-        public static Builder get(string srl)
+        public static Builder Get(string srl)
         {
             Builder builder;
             return cache.TryGetValue(srl, out builder) ? builder : new Builder();

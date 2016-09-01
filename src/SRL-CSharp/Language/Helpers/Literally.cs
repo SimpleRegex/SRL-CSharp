@@ -16,7 +16,7 @@ namespace SRL_CSharp.Language.Helpers
         /// Get the string
         /// </summary>
         /// <returns>Literally string</returns>
-        public string getString()
+        public string GetString()
         {
             return this._string;
         }

@@ -32,7 +32,7 @@ namespace SRL_CSharp.Interfaces
             this.Parameters = new List<object>();
         }
 
-        public void callMethodOn(Builder builder)
+        public void CallMethodOn(Builder builder)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace SRL_CSharp.Interfaces
             }
         }
 
-        public Method setParameters(List<object> parameters)
+        public Method SetParameters(List<object> parameters)
         {
             return null;
         }

@@ -11,19 +11,9 @@ namespace SRL_CSharp.Language.Helpers
         /// <summary>
         /// Get matcher instance. Since this matcher contains static functionality, we'll use a singleton.
         /// </summary>
-        public static Matcher getInstance
-        {
-            get
-            {
-                if (instance == null)
-                {
-                    instance = new Matcher();
-                }
-                return instance;
-            }
-        }
+        public static Matcher GetInstance => instance ?? (instance = new Matcher());
 
-        public Method match(string part)
+        public Method Match(string part)
         {
             return null;
         }
