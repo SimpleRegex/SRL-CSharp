@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SRL_CSharp.Exceptions
+namespace SRL.Exceptions
 {
     public class PregException : SRLException
     {

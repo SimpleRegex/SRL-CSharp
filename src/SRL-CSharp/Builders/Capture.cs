@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SRL_CSharp.Builders
+namespace SRL.Builders
 {
     public class Capture : Builder
     {

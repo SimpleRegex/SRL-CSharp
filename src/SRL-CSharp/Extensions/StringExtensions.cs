@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SRL_CSharp.Extensions
+namespace SRL.Extensions
 {
     public static class StringExtensions
     {

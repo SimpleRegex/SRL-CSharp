@@ -1,11 +1,11 @@
-﻿using SRL_CSharp.Interfaces;
+﻿using SRL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SRL_CSharp.Language.Methods
+namespace SRL.Language.Methods
 {
     public class AndMethod : Method
     {

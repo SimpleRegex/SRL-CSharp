@@ -1,12 +1,12 @@
-﻿using SRL_CSharp.Exceptions;
-using SRL_CSharp.Language.Helpers;
+﻿using SRL.Exceptions;
+using SRL.Language.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SRL_CSharp.Interfaces
+namespace SRL.Interfaces
 {
     /// <summary>
     /// Abstract Method class. Method strings recognized by the Matcher will result in an object of type Method.

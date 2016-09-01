@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SRL_CSharp.Language.Helpers
+namespace SRL.Language.Helpers
 {
     public class Cache
     {

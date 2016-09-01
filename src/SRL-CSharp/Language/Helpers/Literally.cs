@@ -1,6 +1,6 @@
-﻿using SRL_CSharp.Extensions;
+﻿using SRL.Extensions;
 
-namespace SRL_CSharp.Language.Helpers
+namespace SRL.Language.Helpers
 {
     public class Literally
     {

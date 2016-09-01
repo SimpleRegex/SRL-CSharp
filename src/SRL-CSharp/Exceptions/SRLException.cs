@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SRL_CSharp.Exceptions
+namespace SRL.Exceptions
 {
     public class SRLException : Exception
     {

@@ -1,6 +1,6 @@
-﻿using SRL_CSharp.Interfaces;
+﻿using SRL.Interfaces;
 
-namespace SRL_CSharp.Language.Helpers
+namespace SRL.Language.Helpers
 {
     public class Matcher
     {
