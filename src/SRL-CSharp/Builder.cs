@@ -26,16 +26,14 @@ namespace SRL
         /** @var int Type of last method, to avoid invalid builds. */
         protected string lastMethodType = METHOD_TYPE_BEGIN;
 
-        protected Dictionary<string, string> modifierMapper = new Dictionary<string, string>();
-
-        public Builder()
+        protected Dictionary<string, string> modifierMapper = new Dictionary<string, string>
         {
-            modifierMapper.Add("all", "g");
-            modifierMapper.Add("multiLine", "m");
-            modifierMapper.Add("singleLine", "s");
-            modifierMapper.Add("caseInsensitive", "i");
-            modifierMapper.Add("unicode", "u");
-            modifierMapper.Add("allLazy", "U");
-        }
+            { "all", "g" },
+            { "multiLine", "m" },
+            { "singleLine", "s" },
+            { "caseInsensitive", "i" },
+            { "unicode", "u" },
+            { "allLazy", "U" }
+        };
     }
 }
