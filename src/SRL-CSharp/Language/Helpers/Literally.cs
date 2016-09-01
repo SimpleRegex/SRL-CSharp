@@ -5,7 +5,7 @@ namespace SRL.Language.Helpers
     public class Literally
     {
         /** @var string The literal string. */
-        protected string _string = string.Empty;
+        protected string _string;
 
         public Literally(string _string)
         {

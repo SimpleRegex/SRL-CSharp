@@ -10,7 +10,5 @@ namespace SRL.Language.Methods
     public class AndMethod : Method
     {
         public AndMethod(string original, string methodName) : base(original, methodName) { }
-
-        
     }
 }

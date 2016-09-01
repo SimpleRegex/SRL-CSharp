@@ -25,11 +25,11 @@ namespace SRL.Interfaces
         /** @var int[] Contains all executed callbacks for that method. Helps finding "lost" groups. */
         private List<int> executedCallbacks = new List<int>();
 
-        public Method(string original, string methodName)
+        protected Method(string original, string methodName)
         {
-            this.Original = original;
-            this.MethodName = methodName;
-            this.Parameters = new List<object>();
+            Original = original;
+            MethodName = methodName;
+            Parameters = new List<object>();
         }
 
         public void CallMethodOn(Builder builder)
@@ -38,7 +38,7 @@ namespace SRL.Interfaces
             {
 
             } 
-            catch (Exception ex)
+            catch (Exception)
             {
                 //Fix Exception handling
                 throw new SyntaxException();

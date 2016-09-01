@@ -1,13 +1,11 @@
-﻿using System;
-
-namespace SRL.Extensions
+﻿namespace SRL.Extensions
 {
     public static class StringExtensions
     {
         /// <summary>
         /// Returns a string with backslashes before characters that need to be quoted
         /// </summary>
-        /// <param name="Value">Text string need to be escape with slashes</param>
+        /// <param name="value">Text string need to be escape with slashes</param>
         public static string AddSlashes(this string value)
         {
             // List of characters handled:
@@ -22,24 +20,14 @@ namespace SRL.Extensions
             // \134 backslash
             // \140 grave accent
 
-            string result = value;
-
-            try
-            {
-                result = System.Text.RegularExpressions.Regex.Replace(value, @"[\000\010\011\012\015\032\042\047\134\140]", "\\$0");
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
+            string result = System.Text.RegularExpressions.Regex.Replace(value, @"[\000\010\011\012\015\032\042\047\134\140]", "\\$0");
             return result;
         }
 
         /// <summary>
         /// Un-quotes a quoted string
         /// </summary>
-        /// <param name="InputTxt">Text string need to be escape with slashes</param>
+        /// <param name="value">Text string need to be escape with slashes</param>
         public static string StripSlashes(this string value)
         {
             // List of characters handled:
@@ -54,17 +42,7 @@ namespace SRL.Extensions
             // \134 backslash
             // \140 grave accent
 
-            string result = value;
-
-            try
-            {
-                result = System.Text.RegularExpressions.Regex.Replace(value, @"(\\)([\000\010\011\012\015\032\042\047\134\140])", "$2");
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
+            string result = System.Text.RegularExpressions.Regex.Replace(value, @"(\\)([\000\010\011\012\015\032\042\047\134\140])", "$2");
             return result;
         }
     }
