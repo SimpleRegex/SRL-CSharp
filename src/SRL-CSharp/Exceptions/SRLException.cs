@@ -2,7 +2,7 @@
 
 namespace SRL.Exceptions
 {
-    public class SRLException : Exception
+    public abstract class SRLException : Exception
     {
         public SRLException() { }
 
