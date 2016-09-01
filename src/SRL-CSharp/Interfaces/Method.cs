@@ -1,4 +1,5 @@
 ﻿using SRL.Exceptions;
+using SRL.Extensions;
 using SRL.Language.Helpers;
 using System;
 using System.Collections.Generic;
@@ -37,7 +38,7 @@ namespace SRL.Interfaces
             try
             {
 
-            } 
+            }
             catch (Exception)
             {
                 //Fix Exception handling
@@ -47,6 +48,17 @@ namespace SRL.Interfaces
 
         public Method SetParameters(List<object> parameters)
         {
+            foreach (object param in parameters)
+            {
+                if (param.GetType() == typeof(Literally))
+                {
+
+                }
+                else if(param.IsList())
+                {
+
+                }
+            }
             return null;
         }
     }

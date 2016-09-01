@@ -61,6 +61,7 @@
     <Compile Include="Exceptions\PregException.cs" />
     <Compile Include="Exceptions\SRLException.cs" />
     <Compile Include="Exceptions\SyntaxException.cs" />
+    <Compile Include="Extensions\GenericExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Interfaces\Method.cs" />
     <Compile Include="Interfaces\TestMethodProvider.cs" />

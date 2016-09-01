@@ -21,8 +21,6 @@ namespace SRL.Exceptions
             { PregExceptionEnum.JitStacklimitError, PREG_JIT_STACKLIMIT_ERROR }
         };
 
-        //this is missing the Exception creation... looking for a better exception handling
-
         public PregException(PregExceptionEnum type) : base(messages[type])
         {
         }
