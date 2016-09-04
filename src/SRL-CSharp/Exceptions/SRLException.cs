@@ -8,6 +8,6 @@ namespace SRL.Exceptions
 
         protected SRLException(string message) : base(message) { }
 
-        protected SRLException(string message, Exception previous) : base(message, previous) { }
+        protected SRLException(string message, Exception innerException) : base(message, innerException) { }
     }
 }

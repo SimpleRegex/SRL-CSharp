@@ -1,5 +1,9 @@
-﻿namespace SRL.Extensions
+﻿using System.Diagnostics;
+using System.Text.RegularExpressions;
+
+namespace SRL.Extensions
 {
+    [DebuggerStepThrough]
     public static class StringExtensions
     {
         /// <summary>
@@ -20,8 +24,7 @@
             // \134 backslash
             // \140 grave accent
 
-            string result = System.Text.RegularExpressions.Regex.Replace(value, @"[\000\010\011\012\015\032\042\047\134\140]", "\\$0");
-            return result;
+            return Regex.Replace(value, @"[\000\010\011\012\015\032\042\047\134\140]", "\\$0");
         }
 
         /// <summary>
@@ -42,8 +45,13 @@
             // \134 backslash
             // \140 grave accent
 
-            string result = System.Text.RegularExpressions.Regex.Replace(value, @"(\\)([\000\010\011\012\015\032\042\047\134\140])", "$2");
-            return result;
+            return Regex.Replace(value, @"(\\)([\000\010\011\012\015\032\042\047\134\140])", "$2");
+        }
+
+        public static bool PregMatch(this string value)
+        {
+            return (Regex.IsMatch(value, "^[a-z0-9/._-]+$", RegexOptions.IgnoreCase))
+                && (!Regex.IsMatch(value, "([.][.])|([.]/)|(//)")));
         }
     }
 }

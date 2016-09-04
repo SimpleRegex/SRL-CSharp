@@ -32,7 +32,7 @@ namespace SRL.Interfaces
             MethodName = methodName;
             Parameters = new List<object>();
         }
-
+        
         public void CallMethodOn(Builder builder)
         {
             try
@@ -45,21 +45,27 @@ namespace SRL.Interfaces
                 throw new SyntaxException();
             }
         }
-
+        
         public Method SetParameters(List<object> parameters)
         {
-            foreach (object param in parameters)
+            for (int i = 0; i < parameters.Count; i++)
             {
-                if (param.GetType() == typeof(Literally))
+                if (parameters[i].GetType() == typeof(Literally))
                 {
-
+                    parameters[i] = parameters[i].As<Literally>().GetString();
                 }
-                else if(param.IsList())
+                else if (parameters[i].IsList())
                 {
-
+                    // Assuming the user wanted to start a sub-query. This means, we'll create a callback for them.
+                    //$cb = function(Builder $query) use($parameter, $k) {
+                        //$this->executedCallbacks[] = $k;
+                        //Interpreter::buildQuery($parameter, $query);
+                    //};
+                    //$parameter = $cb;
                 }
             }
-            return null;
+            this.Parameters = parameters;
+            return this;
         }
     }
 }

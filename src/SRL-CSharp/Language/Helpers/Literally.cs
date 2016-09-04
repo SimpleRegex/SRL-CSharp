@@ -5,11 +5,11 @@ namespace SRL.Language.Helpers
     public class Literally
     {
         /** @var string The literal string. */
-        protected string _string;
+        protected string @string;
 
         public Literally(string _string)
         {
-            this._string = _string.StripSlashes();
+            this.@string = _string.StripSlashes();
         }
 
         /// <summary>
@@ -18,7 +18,7 @@ namespace SRL.Language.Helpers
         /// <returns>Literally string</returns>
         public string GetString()
         {
-            return this._string;
+            return this.@string;
         }
     }
 }
