@@ -39,5 +39,10 @@ namespace SRL
             Anchor = 16,     //0b10000
             Unknown = 31     //0b11111
         }
+
+        public override string get(string delimiter = "/", bool ignoreInvalid = false)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -51,7 +51,7 @@ namespace SRL.Extensions
         public static bool PregMatch(this string value)
         {
             return (Regex.IsMatch(value, "^[a-z0-9/._-]+$", RegexOptions.IgnoreCase))
-                && (!Regex.IsMatch(value, "([.][.])|([.]/)|(//)")));
+                && (!Regex.IsMatch(value, "([.][.])|([.]/)|(//)"));
         }
     }
 }
